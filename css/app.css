@@ -1,5 +1,7 @@
 body {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+    background: rgb(207,209,223);
+    background: radial-gradient(circle, rgba(207,209,223,1) 0%, rgba(255,255,255,1) 100%);
     font-family: 'Staatliches', cursive;
 }
 html {
