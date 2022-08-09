@@ -116,10 +116,23 @@ function yearsSelect() {
 //Funcion de alto nivel
 function filtrarAuto() {
     const resultado = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTransmision).filter(filtrarColor);
-    //console.log(resultado);
 
-    cargarAutos(resultado);
+    if (resultado.length) {
+        cargarAutos(resultado);
+    } else {
+        sinResultados();
+    }
+}
 
+
+function sinResultados(){
+
+    limpiarHTML();
+
+    const sinResultados = document.createElement('div');
+    sinResultados.classList.add('alerta','error');
+    sinResultados.textContent = 'No Hay Resultados De Busqueda';
+    resultado.appendChild(sinResultados);
 }
 
 function filtrarMarca(auto) {

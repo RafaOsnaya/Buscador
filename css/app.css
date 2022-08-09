@@ -58,6 +58,7 @@ form {
 }
 .alerta {
     padding: 1rem;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
