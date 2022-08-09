@@ -2,16 +2,24 @@ body {
     /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
     background: rgb(207,209,223);
     background: radial-gradient(circle, rgba(207,209,223,1) 0%, rgba(255,255,255,1) 100%);
-    font-family: 'Staatliches', cursive;
+    font-family: 'Quicksand', sans-serif;
 }
 html {
     font-size: 62.5%;
 }
 h1 {
-    font-family: 'Staatliches', cursive;
-    font-size: 6rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 9rem;
     padding: 3rem 0;
     margin: 0;
+}
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    /* padding: 3rem 0; */
+    margin: 0;
+    text-align: center;
+    
 }
 .contenedor {
     background-color: white;
