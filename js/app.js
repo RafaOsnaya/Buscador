@@ -28,7 +28,7 @@ const datosBusqueda = {
 
 //Eventos
 document.addEventListener('DOMContentLoaded', () => {
-    cargarAutos(); //muestra los autors al cargar la pagina
+    cargarAutos(autos); //muestra los autors al cargar la pagina
     yearsSelect(); //Ingresa los años del select anios
 })
 
@@ -64,7 +64,10 @@ color.addEventListener('change', e => {
 
 //Funciones
 
-function cargarAutos() {
+function cargarAutos(autos) {
+
+    limpiarHTML();
+
     autos.forEach(auto => {
 
         //utilizando destructuring
@@ -84,6 +87,14 @@ function cargarAutos() {
     })
 }
 
+//Elimina el HTML previo
+function limpiarHTML(){
+    //mientras exista algo
+    while (resultado.firstChild) {
+        resultado.removeChild(resultado.firstChild);
+    }
+}
+
 //Ingresa los años al select
 function yearsSelect() {
 
@@ -98,7 +109,10 @@ function yearsSelect() {
 //Funcion de alto nivel
 function filtrarAuto() {
     const resultado = autos.filter(filtrarMarca).filter(filtrarYear);
-    console.log(resultado);
+    //console.log(resultado);
+
+    cargarAutos(resultado);
+
 }
 
 function filtrarMarca(auto) {
